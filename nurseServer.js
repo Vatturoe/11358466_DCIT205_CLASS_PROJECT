@@ -1,6 +1,8 @@
 const express = require('express')
 const dotenv = require('dotenv').config();
 const nodemon = require('nodemon')
+const mongoose = require('mongoose')
+const PatientNInfo = require("./models/patientInfoN")
 const app = express();
 
 

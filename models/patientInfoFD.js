@@ -50,5 +50,5 @@ const patientFDSchema = mongoose.Schema (
     }
 )
 
-const patientFDModel = mongoose.model('Product', productSchema)
-module.exports = Product;
+const patientFDModel = mongoose.model('PatientFDInfo', patientFDSchema)
+module.exports = PatientInfoFD;
