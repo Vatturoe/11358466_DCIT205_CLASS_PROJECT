@@ -2,7 +2,7 @@ const express = require('express')
 const dotenv = require('dotenv').config();
 const nodemon = require('nodemon')
 const mongoose = require('mongoose')
-const PatientInfoFD = require("./models/patientInfoFD")
+const PatientFDInfo = require("./models/patientInfoFD.js")
 const app = express();
 
 
@@ -11,6 +11,16 @@ app.get('/', (req, res) => {
 })
 
 app.use(express.json())
+
+app.post('/frontdesk/patient/entry', async(req, res) => {
+    try {
+        const patientInfo = await PatientFDInfo.create(req.body)
+        res.status(200).json(patientInfo);
+    } catch (error) {
+        console.log(error.message)
+        res.status(500).json({message: error.message})
+    }
+})
 
 
 

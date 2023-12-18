@@ -26,4 +26,4 @@ const patientNSchema = mongoose.Schema (
 )
 
 const patientNModel = mongoose.model('Product', productSchema)
-module.exports = PatientNInfo;
+module.exports = patientNModel;
