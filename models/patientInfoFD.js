@@ -30,11 +30,25 @@ const patientFDSchema = mongoose.Schema (
         residentialAddress: {
             type: "String",
             required: [true, "Please enter patient's residential address"]
-        }
+        },
+
+        emergencyName: {
+            type: "String",
+            required: [true, "Please enter patient's emergency name"]
+        },
+
+        contact: {
+            type: "Number",
+            required: [true, "Please enter patient's emergency contact"]
+        },
+
+        relationship: {
+            type: "String",
+            required: [true, "Please enter patient's relationship with the patient"]
+        },
 
     }
 )
-
 
 const patientFDModel = mongoose.model('Product', productSchema)
 module.exports = Product;
